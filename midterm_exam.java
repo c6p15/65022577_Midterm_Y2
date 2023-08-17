@@ -7,6 +7,10 @@ public class midterm_exam {
 
         chair.getName();
         chair.getPrice();
+        chair.setName("ArmChair");
+        chair.getName();
+        chair.setPrice(420.0);
+        chair.getPrice();
         System.out.println("******************");
 
         tv.getName();
@@ -38,20 +42,24 @@ class Product{
         this.Price = price;
     }
 
-    public void getName(){
+    public String getName(){
         System.out.println("Product Name: "+this.Name);
+        return this.Name;
     }
 
-    public void setName(String Newname){
+    public String setName(String Newname){
         this.Name = Newname;
+        return this.Name;
     }
 
-    public void getPrice(){
+    public double getPrice(){
         System.out.println("Product Price: "+this.Price);
+        return this.Price;
     }
 
-    public void setPrice(double Newprice){
+    public double setPrice(double Newprice){
         this.Price = Newprice;
+        return this.Price;
     }
 }
 
@@ -65,20 +73,24 @@ class Electronics extends Product{
         this.Model = model;
     }
     
-    public void getBrand(){
+    public String getBrand(){
         System.out.println("Brand: " + this.Brand);
+        return this.Brand;
     }
 
-    public void setBrand(String Newbrand){
+    public String setBrand(String Newbrand){
         this.Brand = Newbrand;
+        return this.Brand;
     }
     
-    public void getModel(){
+    public String getModel(){
         System.out.println("Model: " + this.Model);
+        return this.Model;
     }
 
-    public void setModel(String Newmodel){
+    public String setModel(String Newmodel){
         this.Model = Newmodel;
+        return this.Model;
     }
 }
 
@@ -90,38 +102,43 @@ class Smartphone extends Electronics{
         this.OperatingSystem = ops;
     }
 
-    public void getOperatingSystem(){
+    public String getOperatingSystem(){
         System.out.println("Operating System: " + this.OperatingSystem);
+        return this.OperatingSystem;
     }
 
-    public void setOperatingSystem(String Newops){
+    public String setOperatingSystem(String Newops){
         this.OperatingSystem = Newops;
+        return this.OperatingSystem;
     }
 }
 
 class Book extends Product{
     private String Author;
     private int Pages;
-
     Book(String name , double price, String author,int pages){
         super(name,price);
         this.Author = author;
         this.Pages = pages;
     }
 
-    public void getAuthor(){
+    public String getAuthor(){
         System.out.println("Author: "+ this.Author);
+        return this.Author;
     }
 
-    public void setAuthor(String Newauthor){
+    public String setAuthor(String Newauthor){
         this.Author = Newauthor;
+        return this.Author;
     }
     
-    public void getPages(){
+    public int getPages(){
         System.out.println("Pages: " + this.Pages);
+        return this.Pages;
     }
 
-    public void setPages(int Newpages){
+    public int setPages(int Newpages){
         this.Pages = Newpages;
+        return this.Pages;
     }
 }
